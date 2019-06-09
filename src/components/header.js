@@ -1,59 +1,39 @@
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from 'styled-components';
 
-const HeaderDiv = styled.div`
+const Title = styled.h1`
+  text-align: center;
+  font-size: 1.85rem;
+  color: #F9F9F9;
+`
+
+const Subtitle = styled.h3`
+  text-align: center;
+  color: #D9D9D9;
+`
+
+const Header = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 970px;
   padding: 1.45rem 1.0875rem;
 `
 
-const Header = styled.header`
-  background: ${props => props.theme = "primary" ? "#14191c" : "#F9F9F9"};
-  color: ${props => props.theme = "primary" ? "#F9F9F9" : "#141119"};
-  position: fixed;
-  left: 0;
-  width: 220px;
-  max-width: 220px;
-  height: 100vh;
+const defaultSubtitle = `
+  Welcome to my Photography Nest.
+  To hop into my software Engineering, click here
 `
 
-const Title = styled.h1`
-  text-align: center;
-  color: "#F9F9F9";
-  display: block;
-  margin: 0 auto;
-  text-decoration: none;
-` 
-
-const navLink = styled(props => <Link />)`
-  color: #F9F9F9;
-  text-decoration: none;
-`
-
-const HeaderComponent = ({ siteTitle, links, theme }) => (
-  <Header theme>
-    {
-      links.map(l => {
-        return (
-          <Title>
-            <navLink 
-              to="/page2/">{l.title}
-            </navLink>
-          </Title>
-        )
-      })
-    }
+const HeaderComp = ({title = 'Boris Po', subt = defaultSubtitle }) => (
+  <Header>
+    <Title>{title}</Title>
+    <Subtitle>{subt}</Subtitle>
   </Header>
 )
 
-HeaderComponent.propTypes = {
-  siteTitle: PropTypes.string,
+Header.propTypes = {
+  title: PropTypes.string,
+  subt: PropTypes.string
 }
 
-HeaderComponent.defaultProps = {
-  siteTitle: ``,
-}
-
-export default HeaderComponent
+export default HeaderComp

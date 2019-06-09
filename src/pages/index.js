@@ -4,13 +4,14 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import NavLinks from './paths'
 
-const NavLinks = [
-  {title: "Home", address:"/"},
-  {title: "About", address:"/about"},
-  {title: "PortoliO", address:"/work"},
-  {title: "Contact", address:"/contact"}
-]
+// const NavLinks = [
+//   {title: "Home", address:"/"},
+//   {title: "About", address:"/about"},
+//   {title: "PortoliO", address:"/gallery"},
+//   {title: "Contact", address:"/contact"}
+// ]
 
 const IndexPage = () => (
   <Layout navlinks={NavLinks} >
@@ -21,7 +22,6 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 

@@ -1,0 +1,8 @@
+const NavLinks = [
+  {title: "Home", address:"/"},
+  {title: "About", address:"/about"},
+  {title: "PortoliO", address:"/gallery"},
+  {title: "Contact", address:"/contact"}
+]
+
+export default NavLinks
