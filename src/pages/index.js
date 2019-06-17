@@ -6,13 +6,6 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import NavLinks from './paths'
 
-// const NavLinks = [
-//   {title: "Home", address:"/"},
-//   {title: "About", address:"/about"},
-//   {title: "PortoliO", address:"/gallery"},
-//   {title: "Contact", address:"/contact"}
-// ]
-
 const IndexPage = () => (
   <Layout navlinks={NavLinks} >
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />

@@ -21,7 +21,7 @@ const Header = styled.div`
 
 const defaultSubtitle = `
   Welcome to my Photography Nest.
-  To hop into my software Engineering, click here
+  To learn about my endeavors in other fields, read my Bio
 `
 
 const HeaderComp = ({title = 'Boris Po', subt = defaultSubtitle }) => (
