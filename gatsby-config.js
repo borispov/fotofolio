@@ -2,11 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Photographer's Nest`,
     description: `Welcome to my nest where you can enjoy my latests works and find the means to contact me for a collaboration or for an inquiry.`,
-    author: `@gatsbyjs`,
+    author: `@Boris.Povolotsky`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,8 +16,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `${__dirname}/src/gatsby-astronaut.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

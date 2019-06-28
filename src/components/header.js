@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from 'styled-components';
 
+import headerLine from './headerLine.png';
+
 const Title = styled.h1`
   text-align: center;
   font-size: 1.85rem;
@@ -14,9 +16,14 @@ const Subtitle = styled.h3`
 `
 
 const Header = styled.div`
+  position: relative;
   margin: 0 auto;
-  max-width: 970px;
+  max-width: 920px;
   padding: 1.45rem 1.0875rem;
+  max-width: 1024px;
+  // max-width: calc(100vw - 150px);
+  margin: 0 auto;
+  padding-left: 130px;
 `
 
 const defaultSubtitle = `
@@ -28,6 +35,9 @@ const HeaderComp = ({title = 'Boris Po', subt = defaultSubtitle }) => (
   <Header>
     <Title>{title}</Title>
     <Subtitle>{subt}</Subtitle>
+    <div>
+      <img src={headerLine} alt=""/>
+    </div>
   </Header>
 )
 

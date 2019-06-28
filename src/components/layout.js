@@ -8,10 +8,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
 
 import Nav from "./nav"
 import Header from './header'
 import "./layout.css"
+
+const Wrapper = styled.div`
+  display: block;
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-left: 130px;
+  padding-top: 55px;
+`
 
 const Layout = ( props,{ children }) => (
   <StaticQuery
@@ -28,7 +38,9 @@ const Layout = ( props,{ children }) => (
       <>
         <Nav siteTitle={data.site.siteMetadata.title} links={props.navlinks} theme="primary" />
           <Header />
-          {props.children}
+          <Wrapper>
+            {props.children}
+          </Wrapper>
       </>
     )}
   />

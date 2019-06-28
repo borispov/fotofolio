@@ -8,8 +8,8 @@ const Nav = styled.header`
   color: ${props => props.theme = "primary" ? "#F9F9F9" : "#141119"};
   position: fixed;
   left: 0;
-  width: 220px;
-  max-width: 220px;
+  width: 150px;
+  max-width: 150px;
   height: 100vh;
 `
 
@@ -53,14 +53,14 @@ const Copyright = styled.p`
   margin-top: 100%;
 `
 
-const styledAnchor = styled.a`
-  // background-image: url(https://img.icons8.com/small/16/000000/instagram-new.png);
-  background: white;
-  height: 14px;
-  width: 16px;
-  text-align: center;
-  display: inline-block;
-`
+// const styledAnchor = styled.a`
+//   background-image: url(https://img.icons8.com/small/16/000000/instagram-new.png);
+//   background: white;
+//   height: 14px;
+//   width: 16px;
+//   text-align: center;
+//   display: inline-block;
+// `
 
 const NavLink = ({ whereto, title }) => (
   <Link 
@@ -74,9 +74,9 @@ const FooterContent = () => (
   <div>
     <Social>
       <a
-        class="instagram"
+        // class="instagram"
         href='https://instagram.com/u/borispov'
-      />
+      ><span className="instagram" /></a>
     </Social>
   </div>
 )
