@@ -8,9 +8,7 @@ import NavLinks from "./paths"
 const IndexPage = () => (
   <Layout navlinks={NavLinks}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image typeOfImages='portrait' />
-    </div>
+    <Image typeOfImages='portrait' />
   </Layout>
 )
 

@@ -4,26 +4,26 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import sizes from './assets/device'
 
 const PhotoGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: repeat(8, 5vw);
+  width: calc(100vw * 0.65);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 10px;
-
-  margin: 2em auto;
-  max-width: 1200px;
   overflow: hidden;
-  @media (min-width: 1201px) {
-    width: 1024px;
-    margin: 12px auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+
+  @media ${sizes.desktopL} {
+    grid-gap: 16px;
   }
 `
 
 const GridItem = styled.div`
   position: relatve;
-  max-width: 320px;
   padding-bottom: 15px;
 `
 
@@ -36,12 +36,6 @@ const PhotoBox = styled.div`
     opacity: 1;
     transition: opacity 0.2s ease-in;
   }
-  // @media (min-width: 1201px) {
-  //   left: 10px;
-  //   right: 10px;
-  //   bottom: 10px;
-  //   top: 10px;
-  // }
 `
 
 const PhotoGridComponent = (props) => (

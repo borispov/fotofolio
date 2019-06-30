@@ -8,14 +8,12 @@ const ImageAll = () => (
     <StaticQuery
       query={graphql`
         query {
-          images: allFile {
+          images: allImageSharp {
             edges {
               node {
-                name
-                childImageSharp {
-                  fluid (maxWidth: 320, maxHeight: 170){
-                    ...GatsbyImageSharpFluid
-                  }
+                id
+                fluid (maxWidth: 320, maxHeight: 170){
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -23,16 +21,14 @@ const ImageAll = () => (
         }
       `}
       render={data => (
-          <div>
-            <PhotoGridComponent>
-              {data.images.edges.map(imgNode => (
-                <Img
-                  key={imgNode.node.name}  
-                  fluid={imgNode.node.childImageSharp.fluid} 
-                />
-              ))}
-            </PhotoGridComponent>
-          </div>
+          <PhotoGridComponent>
+            {data.images.edges.map(imgNode => (
+              <Img
+                key={imgNode.node.id}
+                fluid={imgNode.node.fluid} 
+              />
+            ))}
+          </PhotoGridComponent>
         )
       }
     />

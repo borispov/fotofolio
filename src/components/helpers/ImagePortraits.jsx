@@ -23,16 +23,14 @@ const ImagePortraits = () => (
         }
       `}
       render={data => (
-          <div>
-            <PhotoGridComponent>
-              {data.images.edges.map(imgNode => (
-                <Img
-                  key={imgNode.node.name}  
-                  fluid={imgNode.node.childImageSharp.fluid} 
-                />
-              ))}
-            </PhotoGridComponent>
-          </div>
+          <PhotoGridComponent>
+            {data.images.edges.map(imgNode => (
+              <Img
+                key={imgNode.node.name}  
+                fluid={imgNode.node.childImageSharp.fluid} 
+              />
+            ))}
+          </PhotoGridComponent>
         )
       }
     />

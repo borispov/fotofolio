@@ -17,13 +17,10 @@ const Subtitle = styled.h3`
 
 const Header = styled.div`
   position: relative;
-  margin: 0 auto;
-  max-width: 920px;
   padding: 1.45rem 1.0875rem;
   max-width: 1024px;
-  // max-width: calc(100vw - 150px);
   margin: 0 auto;
-  padding-left: 130px;
+  // padding-left: 130px;
 `
 
 const defaultSubtitle = `

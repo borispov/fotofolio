@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
 html {
   font-family: 'Nunito' ,sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6,7 +8,6 @@ html {
   padding: 0;
   margin: 0;
   min-height: 100%;
-
 }
 body {
   background: #262525;
@@ -67,26 +68,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
+
 img {
   border-style: none;
 }
@@ -208,7 +190,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-img {
+/* img {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -218,7 +200,7 @@ img {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
+} */
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -233,6 +215,7 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
+  font-family: 'PT Serif';
 }
 h2 {
   margin-left: 0;
@@ -309,16 +292,7 @@ h6 {
   font-size: 0.78405rem;
   line-height: 1.1;
 }
-hgroup {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
+
 ul {
   margin-left: 1.45rem;
   margin-right: 0;
@@ -331,38 +305,7 @@ ul {
   list-style-position: outside;
   list-style-image: none;
 }
-ol {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
-dl {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-dd {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
+
 p {
   margin-left: 0;
   margin-right: 0;
@@ -372,6 +315,9 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-size: 17px;
+  line-height: 1.35;
+  font-family: 'Times New Roman', georgia, sans-serif;
 }
 figure {
   margin-left: 0;
